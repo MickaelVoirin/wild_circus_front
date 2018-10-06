@@ -1,0 +1,404 @@
+/* CSS ne prenant pas en compte les largeurs d'écrans inférieures à 1000px */
+
+/* Général */
+html{height:5px;}
+body{
+  background-color: rgba(245, 176, 65, 0.3);
+  margin:0;
+}
+hr{border:1px solid #F08323}
+.clear{clear:both;}
+h1, h2, h3{
+  font-family: 'Amatic SC', cursive;
+}
+h2{
+  text-align:center;
+  width:24%;
+  background-color:rgba(245, 176, 65, 0.8);
+  margin:0 auto;
+  padding:10px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  font-size:30px;letter-spacing:4px;
+  margin-top:20px;
+}
+h3{
+  text-align:center;
+  font-size:22px;
+   font-size:28px;letter-spacing:4px;
+}
+p.text{
+  text-align:center;
+  font-size:18px;
+  padding:30px 0;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  background-color:rgba(245, 176, 65, 0.3);
+}
+
+/* Header */
+header{
+  z-index:10;
+  position:fixed;top:0;left:0;
+  background-color:#F5B041;width:100%;
+  border-bottom:2px solid #F08323;
+}
+header h1, header nav, header nav ul{
+  height:40px; line-height:40px;
+}
+header h1, header nav{
+  margin:10px 0
+}
+
+header nav ul{
+  margin:0;padding:0;
+}
+header h1{
+  float:left; width:30%;
+   text-align:center;
+  font-size:50px; letter-spacing:6px;
+}
+header h1 a {
+  color:#000;text-decoration:none;
+}
+header nav{
+  float:left; width:70%;
+}
+header ul li {
+  display:block;float:left;
+  margin:2px 2%; padding:6px 20px 2px;
+  height:32px; line-height:34px;
+  color: #000;font-weight: bold;
+  cursor:pointer;
+  font-family: 'Amatic SC', cursive;
+  font-size:25px;
+  letter-spacing:2px;
+}
+
+
+/* Section : Perfomances */
+section#performances{
+  margin-top:80px;
+  margin-bottom:30px;
+}
+
+section#performances ul{
+  background: rgba(245, 176, 65, 0.3) url("http://www.cirquephenix.com/wp-content/uploads/2016/04/DSC0241-915x285.png") no-repeat 0 -150px;
+  background-size: 100% 500px;
+  padding-top:200px;
+  height:550px;
+  width:100%;
+  padding:0;
+}
+section#performances ul li{
+  display:block;float:left;
+  width:15%; margin:280px 5% 0; padding:0 2%;
+  text-align:center;
+  border:2px solid #F08323;
+  min-height:235px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  background-color:#F6B667;
+}
+section#performances ul li:first-child{
+  background-color:#FAD69E;
+  margin-left:11%;
+}
+section#performances ul li:last-child{
+  background-color:#F6BB5C;
+  margin-right:10%;
+}
+ 
+section#performances ul li p{
+  font-size:18px;
+}
+/* Ajustements écrans 1000 et + // pas de devices */
+@media only screen and (max-width:1700px){
+  section#performances ul{height:575px;}
+  section#performances ul li{min-height:260px;}
+}
+@media only screen and (max-width:1400px){
+  section#performances ul{background-position:0 -170px;height:540px;}
+  section#performances ul li{margin:245px 3% 0;width:18%;}
+}
+@media only screen and (max-width:1280px){
+  section#performances ul{background-size: 100% 450px;height:490px;}
+  section#performances ul li{margin:195px 3% 0;width:19%;}
+  section#performances ul li:first-child{
+  margin-left:8%;
+}
+section#performances ul li:last-child{
+  margin-right:8%;
+}
+}
+@media only screen and (max-width:1100px){
+  section#performances ul{background-size: 100% 420px;height:480px;}
+  section#performances ul li{min-height:250px;padding:0 1%; width:21%}
+}
+/* Section : About Us */
+section#aboutus{
+  min-height:500px;
+}
+
+section#aboutus div{width:700px; margin:50px auto 40px;}
+section#aboutus iframe{
+  border:2px solid #F69940;
+}
+
+/* Section : Prices */
+section#prices{
+  margin-bottom:50px;
+}
+section#prices h2{
+  margin-bottom:30px;
+}
+section#prices > div{
+  width:80%;
+  padding-top:20px;
+  margin:0 auto;
+  background: transparent url("http://solocircus.com/new/wp-content/themes/circus/assets/ticket.png") no-repeat 20% 20px;
+  background-size:245px;
+}
+
+section#prices #priceIntro{
+  margin-left:38%;height:160px;min-width:10px;
+}
+
+section#prices #priceIntro p.text{float:left;width:300px;margin-left:5%}
+
+section#prices table{ 
+  padding:0;
+  border-spacing:0;
+  width:800px;
+  font-size:18px;
+  margin:0 auto;
+}
+section#prices table i{
+  font-weight:normal;
+  font-size:17px;
+}
+section#prices table td::after { 
+    content: " €";
+}
+section#prices table th, section#prices table td{
+  text-align:center;
+  padding:5px 0;
+  width:18%;
+  vertical-align: middle;
+  height:30px;
+}
+
+section#prices table th{
+  background-color:#F5B041;  
+}
+section#prices table td{
+  background-color:rgba(245, 176, 65, 0.3);  
+}
+
+section#prices table tr:first-child th{
+  border-bottom:2px solid #F08323;
+  border-top:2px solid #F08323;
+}
+section#prices table tr th,
+section#prices table tr td{
+  border-bottom:1px solid #F08323;
+}
+
+section#prices table tr:last-child th, 
+section#prices table tr:last-child td{
+ border-bottom:2px solid #F08323;
+}
+section#prices table th:first-child{
+  text-align:left;
+  width:24%;
+  padding-left:8px;
+  border-right:2px solid #F08323;
+  border-left:2px solid #F08323;
+}
+section#prices table th,
+section#prices table td{
+  border-right:1px solid #F08323;
+}
+section#prices table th:last-child,
+section#prices table td:last-child{
+  border-right:2px solid #F08323;
+}
+
+section#prices table tr:first-child th:first-child{
+  border-top:none; 
+  border-left:none; 
+  background-color:transparent;
+}
+
+section#prices table tr:last-child td:last-child {
+  border:none;
+  border-top:1px solid #F08323;
+  background-color:transparent;
+  text-align:right;
+  padding-right:10px;
+  height:20px;
+}
+section#prices table tr:last-child td:last-child::after { 
+    content: none;
+}
+
+/* Ajustements écrans 1000 et + // pas de devices */
+@media only screen and (max-width:1600px){
+  section#prices > div{background-position:15% 20px;}
+  section#prices #priceIntro{margin-left:33%;}
+}  
+@media only screen and (max-width:1400px){
+  section#prices > div{background-position:10% 25px;background-size:220px;}
+}
+@media only screen and (max-width:1280px){
+  section#prices > div{padding-top:0px;background-size:210px;background-position:12% 15px;width:90%}
+  section#prices #priceIntro{height:145px;}
+  section#prices #priceIntro p.text{margin-left:4%;}
+  section#prices table{clear:both;margin:20px 15%;}
+  section#prices h2{margin-bottom:40px;}
+}
+
+@media only screen and (max-width:1150px){
+  section#prices > div{width:100%;}
+}
+
+
+/* Section : Contact */
+section#contacts{
+  /* height:1000px;*/
+  background: transparent url("http://www.cabaretsauvage.com/wp-content/uploads/2012/08/diapo-temp11.jpg") no-repeat 0 590px;
+  background-size:100%;
+  height:980px;
+}
+section#contacts > div{
+  margin:50px auto;
+  width:80%;
+}
+section#contacts > div > div{
+  float:right;
+  width:38%;
+  height:600px;
+  margin-right:8%;
+  background: transparent url("http://findicons.com/files/icons/755/id/256/email.png") no-repeat 50% 160px;
+  background-size:150px;
+}
+section#contacts > div > div p{
+  margin:25px 0;
+}
+section#contacts > div > div p:first-child{
+  margin-bottom:170px;
+}
+
+section#contacts form{
+  float:left;
+  width:370px;
+  margin:0 0 0 5%;
+  padding:1px 5%;
+  background-color:#F6B667;
+  /* border:2px solid #F08323; */
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+}
+section#contacts form p{padding:10px 0;font-size:18px;}
+
+section#contacts form p label{
+  clear:both;float:left;display:block;
+}
+section#contacts form p input,
+section#contacts form p select{
+  text-indent:5px;
+  float:right;display:block;
+  width:220px;
+  border:2px solid #F08323;
+}
+section#contacts form p select{
+  width:225px;
+}
+section#contacts form p#textarea{
+  clear:both;
+  float:right;
+  padding:0;margin:5px 0 0;
+}
+section#contacts form p#textarea textarea{
+  text-indent:5px;
+  width:330px;height:100px;
+  resize:none;
+  border:2px solid #F08323;
+}
+section#contacts form p:last-child{
+  text-align:right;
+}
+section#contacts form p:last-child span{
+  float:left;
+}
+section#contacts form p button{
+  border:2px solid #F08323;
+  padding:8px 15px;
+}
+/* Ajustements écrans 1000 et + // pas de devices */
+@media only screen and (max-width:1410px){
+  section#contacts{
+    height:910px;
+  }
+  section#contacts > div > div{
+    width:27%;
+    margin-right:10%;
+    background-size:110px;
+    background-position:50% 190px;
+  }
+  section#contacts > div > div p:first-child{
+    margin:15px 0 125px;
+  }
+  section#contacts form{margin-left:2%;}
+}
+@media only screen and (max-width:1280px){
+  section#contacts{
+      height:880px;
+    }
+  section#contacts > div > div{
+    width:24%;
+    margin-right:8%;
+    background-size:100px;
+    background-position:50% 205px;
+  }
+  section#contacts > div > div p:first-child{
+    margin:10px 0 110px;
+  }
+  section#contacts form{margin-left:5%;}
+}
+@media only screen and (max-width:1100px){
+  section#contacts{
+    height:850px;
+  }
+  section#contacts > div > div{
+    margin-right:3%;
+    width:28%;
+  }
+}
+
+
+
+/* Footer */
+footer{
+  position:relative;bottom:0;
+  background-color:rgba(245, 176, 65, 0.8);width:100%;
+  border-top:2px solid #F08323;
+}
+footer p{
+  margin:0;text-align:center;
+  padding:5px 0; line-height:23px;
+  font-style:italic; font-size:16px;
+  opacity:0.8;
+}
+footer p br {display:none;}
+footer p a {color:#000;}
+
+/* Ajustements écrans 1000 et + // pas de devices */
+@media only screen and (max-width:1280px){
+  footer p br {display:inline;}
+  footer p span {display:none;}
+}

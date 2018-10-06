@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wild Circus template</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Wild Circus</title>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      <h1><a href="#">Wild Circus</a></h1>
+      <nav>
+        <ul>
+            <!-- TODO: Les liens du menu doivent nous emmener vers les sections correspondantes dans la page -->
+            <li class="menu" id="performance">Performances</li>
+            <li class="menu" id="aboutu">About&nbsp;Us</li>
+            <li class="menu" id="price">Prices</li>
+            <li class="menu" id="contact">Contact</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="performances">
+      <h2>Performances</h2>
+      
+      <!-- TODO: En utilisant du css place ces trois performances ("lough", "dream, "marvel at") sur la même ligne en enlevant le point généré par la balise "li" -->
+      <ul>
+        <li>
+            <h3>Laugh</h3>
+          <p>As an adult, come and <b>discover</b> our <b>irresistible clowns</b>, between practical <b>jokes</b> and <b>pranks</b> let yourself be carried away by <b>their joy</b> and fall back into childhood.</p>
+         </li>
+         <li>
+            <h3>Dream</h3>
+            <p>Let yourself be carried away in <b>a world where the real and the imaginary are one</b>, in the company of our <b>talented magicians</b>, discover a wonderful world limited only by your imagination.</p>
+         </li>
+         <li>
+            <h3>Marvel at</h3>
+           <p>Tame the untameable in the company of our <b>tamers</b>, between roar and razor-sharp claws, watch these <b>fierce felines</b> turn into sweet kittens.</p>
+         </li>
+      </ul>
+      
+    </section>
+
+    <hr class="clear"/>
+
+    <section id="aboutus">
+      <h2>About Us</h2>
+      <!-- TODO: Cette section n'a pas encore été réalisée, tu as carte blanche pour nous montrer ta créativité -->
+     
+      <div>
+        <div id="player"></div>
+        <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '400',
+          width: '700',
+          videoId: 'MFAqFOUZIzU'
+        });
+      }
+      
+        </script>
+      </div>
+      
+    </section>
+
+    <hr/>
+
+    <section id="prices">
+      <h2>Prices</h2>
+      <!-- TODO:  Réalise un tableau qui présente les différents prix. Exemple (aggrandis la fenêtre en largeur pour bien voir l'exemple ci-dessous) :
+
+                                | Adultes | Enfants de moins de 12 ans | Groupes (plus de 10 personnes) | Ecoles
+        Semaines hors mercredi  |         |                         |                                |
+        week-end et mercredi    |         |                         |                                |
+      -->
+      
+      <div>
+        <div id="priceIntro">
+          <p class="text"><b>Enjoy</b> our shows and rides at&nbsp;<b>attractive&nbsp;prices</b>.</p>
+          <p class="text">We welcome you <b>every day from&nbsp;10am&nbsp;to&nbsp;11pm</b>.
+          </p>
+        </div>
+        <table>
+          <tr>
+            <th></th>
+            <th>Adults<br><i>(1 person)</i></th>
+            <th>Children (-12)<br><i>(1 person)</i></th>
+            <th>Groups*<br><i>(10 persons)</i></th>
+            <th>School classes*<br><i>(20 persons)</i></th>
+          </tr>
+          <tr>
+            <th>Monday, Tuesday,<br>Thursday, Friday</th>
+            <td>10</td>
+            <td>5</td>
+            <td>50</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>15</td>
+            <td>10</td>
+            <td>80</td>
+            <td>140</td>
+          </tr>
+           <tr>
+            <th>Saturday, Sunday</th>
+            <td>18</td>
+            <td>12</td>
+            <td>100</td>
+            <td>170</td>
+          </tr>
+          <tr>
+            <th>School vacation</th>
+            <td>15</td>
+            <td>10</td>
+            <td>80</td>
+            <td>140</td>
+          </tr>
+          <tr>
+            <td colspan="5"><i>*Additional peoples at regular rates</i></td>
+          </tr>
+        </table>
+        <div class="clear"></div>
+      </div>
+    </section>
+
+    <hr/>
+
+    <section id="contacts">
+      <h2>Contact Us</h2>
+      <div>
+      <!-- TODO: Réalise un formulaire de contact avec les champs email et message plus un bouton pour envoyer le message.
+        Ce formulaire n'a pas besoin d'être fonctionnel, réalise juste la mise en forme.
+      -->
+      <form action="#" method="post">
+        <h3>Send us a message !</h3>
+        <p>
+          <label for="name">First name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter your first name here">    
+        </p>
+        <p>
+          <label for="email">Email*:</label>
+          <input type="text" name="email" id="email" placeholder="Enter your email address here">    
+        </p>
+        <p>
+          <label for="object">Object:</label>
+          <select name="object" id="object">
+            <option value="0">Select a category...</option>
+            <option value="1">About Wild Circus company</option>
+             <option value="2">Problem with the web site</option>
+            <option value="3">What else?</option>
+          </select>
+        <p class="clear"><label for="message">Message*:</label></p>
+        <p id="textarea"><textarea name="message" id="message" placeholder="Enter your message here"></textarea></p>
+        <p class="clear"><span>*Required fields</span><button name="bouton">Envoyer</button></p>
+      </form>
+      <div>
+        <p class="text"><b>All members</b> from Wild&nbsp;Circus&nbsp;company<br>are&nbsp;disposed to&nbsp;answer&nbsp;you.<br><b>Do&nbsp;not&nbsp;hesitate</b> to&nbsp;contact&nbsp;us&nbsp;with <b>the&nbsp;opposite&nbsp;form</b></p>
+        <p class="text"><b>Postal&nbsp;address:</b> 11&nbsp;rue&nbsp;de&nbsp;Poissy, 75005&nbsp;Paris<br><b>Tel:</b> 01&nbsp;XX&nbsp;XX&nbsp;XX&nbsp;XX</p>
+       
+      </div>  
+     </div>
+    </section>
+
+    <footer>
+      <!-- TODO: Entre ton nom et prénom.
+        Mets en place un lien vers le site de la Wild Code School (https://wildcodeschool.fr).
+        Tu peux egalement mettre un lien sur ton nom vers ton site, ton blog ou ton profil github ou linkedin, si tu en a un.
+       -->
+      <p>Wild Circus by Voirin Mickael - Pictures took on Google in order to realize an exercice / no commercial use <br><span>-</span> France-IOI: <a href="http://www.france-ioi.org/user/perso.php?sLogin=mikiway" target="_blank">Profil card</a> - SoloLearn: Not done - <a href="https://wildcodeschool.fr" target="_blank">Wild Code School</a> - 10/11/17</p>
+    </footer>
+</body>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
